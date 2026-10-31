@@ -1,0 +1,58 @@
+{
+  "name": "Ramadan Companion — Pendamping Ibadah Ramadan",
+  "short_name": "Ramadan",
+  "description": "Aplikasi pendamping ibadah Ramadan: Jadwal Sholat & Imsakiyah akurat, Al-Qur'an 30 Juz, pelacak ibadah harian, doa, hadits, galeri, dan podcast islami.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f8ef",
+  "theme_color": "#f4f8ef",
+  "orientation": "portrait",
+  "lang": "id",
+  "categories": ["lifestyle", "education", "utilities"],
+  "icons": [
+    {
+      "src": "/crescent.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/crescent.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Jadwal Sholat & Imsak",
+      "short_name": "Jadwal",
+      "description": "Buka jadwal sholat hari ini dan imsakiyah",
+      "url": "/jadwal",
+      "icons": [{ "src": "/crescent.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Al-Qur'an 30 Juz",
+      "short_name": "Al-Qur'an",
+      "description": "Baca Al-Qur'an 30 juz & terjemahan Kemenag",
+      "url": "/quran",
+      "icons": [{ "src": "/crescent.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Pelacak Ibadah",
+      "short_name": "Ibadah",
+      "description": "Catat amalan sholat, tilawah, dan sedekah",
+      "url": "/ibadah",
+      "icons": [{ "src": "/crescent.svg", "sizes": "96x96" }]
+    },
+    {
+      "name": "Podcast Islami",
+      "short_name": "Podcast",
+      "description": "Dengarkan podcast pengantar tidur, buka, dan sahur",
+      "url": "/podcast",
+      "icons": [{ "src": "/crescent.svg", "sizes": "96x96" }]
+    }
+  ]
+}
+

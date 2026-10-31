@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { color-scheme: light; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background-color: #f4f8ef;
+    font-optical-sizing: auto;
+    line-height: 1.55;
+  }
+
+  h1, h2, h3 { text-wrap: balance; letter-spacing: -0.015em; }
+  p { text-wrap: pretty; }
+
+  /* Fokus keyboard terlihat jelas di semua elemen interaktif */
+  :focus-visible {
+    outline: 2px solid #8a5c19;
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  :focus:not(:focus-visible) { outline: none; }
+
+  ::selection { background: #f5df8c; color: #1d2a17; }
+
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: #f4f8ef; }
+  ::-webkit-scrollbar-thumb { background: #aebf9d; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: #7f9270; }
+
+  /* Hormati pengaturan "kurangi gerakan" */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .safe-area-bottom { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+
+  /* Nama lama dipertahankan, tampilannya sekarang datar */
+  .glass-panel {
+    background: #ffffff;
+    border: 1px solid rgba(47, 63, 39, 0.16);
+  }
+  .glass-card-interactive {
+    background: #ffffff;
+    border: 1px solid rgba(47, 63, 39, 0.16);
+    transition: border-color 0.15s ease, background-color 0.15s ease;
+  }
+  .glass-card-interactive:hover {
+    background: #f0f6e8;
+    border-color: rgba(174, 122, 27, 0.6);
+  }
+}
