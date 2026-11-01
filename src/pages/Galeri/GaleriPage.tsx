@@ -166,7 +166,7 @@ export const GaleriPage: React.FC = () => {
       setFormDescription('');
 
       showToast({
-        title: 'Kenangan Tersimpan! ✨',
+        title: 'Kenangan Tersimpan!',
         message: `Foto momen "${saved.title}" pada ${saved.day} ${saved.monthName} ${saved.year} berhasil diabadikan.`,
         type: 'success',
       });
@@ -262,7 +262,7 @@ export const GaleriPage: React.FC = () => {
             onClick={() => setSelectedCategory('all')}
             className={`px-3.5 py-2 min-h-[40px] rounded-lg text-xs font-semibold whitespace-nowrap transition-all touch-manipulation cursor-pointer active:scale-95 ${
               selectedCategory === 'all'
-                ? 'bg-accent-400 text-ink-50 font-semibold'
+                ? 'bg-accent-400 text-on-accent font-semibold'
                 : 'text-ink-400 hover:text-ink-200 hover:bg-ink-800/40'
             }`}
           >
@@ -275,7 +275,7 @@ export const GaleriPage: React.FC = () => {
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-3.5 py-2 min-h-[40px] rounded-lg text-xs font-semibold whitespace-nowrap transition-all touch-manipulation cursor-pointer active:scale-95 ${
                 selectedCategory === cat.id
-                  ? 'bg-accent-400 text-ink-50 font-semibold'
+                  ? 'bg-accent-400 text-on-accent font-semibold'
                   : 'text-ink-400 hover:text-ink-200 hover:bg-ink-800/40'
               }`}
             >

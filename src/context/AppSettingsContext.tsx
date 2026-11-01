@@ -16,7 +16,7 @@ import {
 const STORAGE_KEY = 'ramadan_companion_settings';
 
 const DEFAULT_SETTINGS: AppSettings = {
-  theme: 'dark',
+  theme: 'light',
   location: {
     city: 'Jakarta',
     country: 'Indonesia',
@@ -62,27 +62,23 @@ export const AppSettingsProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
   const [isDetectingLocation, setIsDetectingLocation] = useState(false);
 
-  // Apply theme class to document root
+  // Terapkan tema ke <html>; mode "system" mengikuti perangkat secara langsung
   useEffect(() => {
     if (typeof document === 'undefined') return;
     const root = document.documentElement;
-    if (settings.theme === 'light') {
-      root.classList.remove('dark');
-      root.classList.add('light');
-    } else if (settings.theme === 'dark') {
-      root.classList.remove('light');
-      root.classList.add('dark');
-    } else {
-      // System
-      const prefersDark =
-        window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if (prefersDark) {
-        root.classList.add('dark');
-        root.classList.remove('light');
-      } else {
-        root.classList.remove('dark');
-        root.classList.add('light');
-      }
+    const media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    const apply = () => {
+      const dark = settings.theme === 'dark' || (settings.theme === 'system' && !!media?.matches);
+      root.classList.toggle('dark', dark);
+      root.classList.toggle('light', !dark);
+      document
+        .querySelector('meta[name="theme-color"]')
+        ?.setAttribute('content', dark ? '#0a0f21' : '#f4f8ef');
+    };
+    apply();
+    if (settings.theme === 'system' && media) {
+      media.addEventListener('change', apply);
+      return () => media.removeEventListener('change', apply);
     }
   }, [settings.theme]);
 

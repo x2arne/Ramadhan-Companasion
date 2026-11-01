@@ -42,6 +42,8 @@ export const BottomNav: React.FC = () => {
     '/podcast',
     '/pengaturan',
     '/khazanah',
+    '/donasi',
+    '/info-update',
   ].includes(location.pathname);
 
   // Close drawer when route changes
@@ -161,7 +163,7 @@ export const BottomNav: React.FC = () => {
                 <button
                   type="button"
                   onClick={handleInstallClick}
-                  className="w-full min-h-[44px] px-4 py-2.5 rounded-lg bg-accent-400 hover:bg-accent-500 text-ink-50 text-sm font-semibold flex items-center justify-center gap-2 active:scale-95 touch-manipulation cursor-pointer"
+                  className="w-full min-h-[44px] px-4 py-2.5 rounded-lg bg-accent-400 hover:bg-accent-500 text-on-accent text-sm font-semibold flex items-center justify-center gap-2 active:scale-95 touch-manipulation cursor-pointer"
                 >
                   <Smartphone className="w-4 h-4" />
                   <span>Pasang Aplikasi ke Layar Utama (PWA)</span>

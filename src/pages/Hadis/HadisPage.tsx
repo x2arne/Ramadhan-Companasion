@@ -242,7 +242,7 @@ export const HadisPage: React.FC = () => {
           }}
           className={`flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-lg text-xs font-semibold transition-all shrink-0 touch-manipulation cursor-pointer active:scale-95 ${
             activeMainTab === 'hadis'
-              ? 'bg-accent-400 text-ink-50 font-semibold'
+              ? 'bg-accent-400 text-on-accent font-semibold'
               : 'bg-surface-elevated/40 text-ink-400 hover:text-ink-200 hover:bg-ink-800/50'
           }`}
         >
@@ -261,7 +261,7 @@ export const HadisPage: React.FC = () => {
           }}
           className={`flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-lg text-xs font-semibold transition-all shrink-0 touch-manipulation cursor-pointer active:scale-95 ${
             activeMainTab === 'edukasi'
-              ? 'bg-accent-400 text-ink-50 font-semibold'
+              ? 'bg-accent-400 text-on-accent font-semibold'
               : 'bg-surface-elevated/40 text-ink-400 hover:text-ink-200 hover:bg-ink-800/50'
           }`}
         >
@@ -280,7 +280,7 @@ export const HadisPage: React.FC = () => {
           }}
           className={`flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-lg text-xs font-semibold transition-all shrink-0 touch-manipulation cursor-pointer active:scale-95 ${
             activeMainTab === 'favorit'
-              ? 'bg-accent-400 text-ink-50 font-semibold'
+              ? 'bg-accent-400 text-on-accent font-semibold'
               : 'bg-surface-elevated/40 text-ink-400 hover:text-ink-200 hover:bg-ink-800/50'
           }`}
         >

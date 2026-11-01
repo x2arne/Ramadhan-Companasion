@@ -395,7 +395,7 @@ export const HomePage: React.FC = () => {
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
             to="/ibadah"
-            className="inline-flex min-h-[44px] items-center rounded-lg bg-accent-400 px-5 text-sm font-semibold text-ink-50 hover:bg-accent-500"
+            className="inline-flex min-h-[44px] items-center rounded-lg bg-accent-400 px-5 text-sm font-semibold text-on-accent hover:bg-accent-500"
           >
             Catat sedekah
           </Link>

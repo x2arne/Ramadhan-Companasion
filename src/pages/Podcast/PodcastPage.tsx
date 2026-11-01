@@ -141,14 +141,14 @@ export const PodcastPage: React.FC = () => {
     if (nextVal) {
       await requestWakeLock();
       showToast({
-        title: 'Layar Tetap Menyala Aktif ☀️',
+        title: 'Layar Tetap Menyala Aktif',
         message: 'Layar HP tidak akan mati otomatis saat podcast sedang diputar.',
         type: 'success',
       });
     } else {
       await releaseWakeLock();
       showToast({
-        title: 'Layar Normal 🌙',
+        title: 'Layar Normal',
         message: 'Layar HP akan mengikuti batas waktu timeout standar.',
         type: 'info',
       });
@@ -251,7 +251,7 @@ export const PodcastPage: React.FC = () => {
           setIsPlaying(false);
 
           showToast({
-            title: 'Sleep Timer Berakhir 🌙',
+            title: 'Sleep Timer Berakhir',
             message: 'Pemutaran podcast dihentikan otomatis. Selamat tidur dan istirahat dengan lelap.',
             type: 'info',
             duration: 4000,
@@ -440,12 +440,12 @@ export const PodcastPage: React.FC = () => {
       category: newCategory,
       categoryLabel:
         newCategory === 'tidur'
-          ? 'Pengantar Tidur 🌙'
+          ? 'Pengantar Tidur'
           : newCategory === 'buka'
-          ? 'Menunggu Buka 🌅'
+          ? 'Menunggu Buka'
           : newCategory === 'sahur'
-          ? 'Menemani Sahur 🥣'
-          : 'Tadabbur Ramadan 📖',
+          ? 'Menemani Sahur'
+          : 'Tadabbur Ramadan',
       suitableFor: 'Podcast YouTube pilihan pribadi Anda',
       description: `Kajian YouTube ditambahkan secara kustom ke Ramadan Companion. Siap diputar dalam Mode MP4 (Video) maupun Mode MP3 (Audio Banner).`,
       duration: 'YouTube',
@@ -597,7 +597,7 @@ export const PodcastPage: React.FC = () => {
                     }}
                     className={`flex items-center gap-1.5 px-3.5 py-2 min-h-[40px] rounded-lg text-xs font-bold transition-all touch-manipulation cursor-pointer active:scale-95 ${
                       mediaMode === 'mp4'
-                        ? 'bg-accent-400 text-ink-50 font-semibold'
+                        ? 'bg-accent-400 text-on-accent font-semibold'
                         : 'text-ink-400 hover:text-ink-200'
                     }`}
                   >
@@ -617,7 +617,7 @@ export const PodcastPage: React.FC = () => {
                     }}
                     className={`flex items-center gap-1.5 px-3.5 py-2 min-h-[40px] rounded-lg text-xs font-bold transition-all touch-manipulation cursor-pointer active:scale-95 ${
                       mediaMode === 'mp3'
-                        ? 'bg-accent-400 text-ink-50 font-semibold'
+                        ? 'bg-accent-400 text-on-accent font-semibold'
                         : 'text-ink-400 hover:text-ink-200'
                     }`}
                   >
@@ -642,7 +642,7 @@ export const PodcastPage: React.FC = () => {
                 >
                   <Sun className={`w-3.5 h-3.5 ${keepScreenAwake && isWakeLockActive ? 'text-accent-700' : ''}`} />
                   <span className="hidden xs:inline">
-                    {keepScreenAwake && isWakeLockActive ? 'Layar Nyala ☀️' : 'Anti-Mati'}
+                    {keepScreenAwake && isWakeLockActive ? 'Layar Nyala' : 'Anti-Mati'}
                   </span>
                 </button>
 
@@ -672,7 +672,7 @@ export const PodcastPage: React.FC = () => {
                     <span>
                       {sleepTimerRemaining
                         ? `Tidur: ${Math.ceil(sleepTimerRemaining / 60)}m`
-                        : 'Sleep Timer 🌙'}
+                        : 'Sleep Timer'}
                     </span>
                   </button>
 
@@ -689,7 +689,7 @@ export const PodcastPage: React.FC = () => {
                           onClick={() => setSleepTimer(mins)}
                           className={`w-full text-left px-3 py-1.5 rounded-lg flex items-center justify-between transition-colors ${
                             sleepTimerMinutes === mins
-                              ? 'bg-accent-400 text-ink-50 font-semibold font-semibold'
+                              ? 'bg-accent-400 text-on-accent font-semibold font-semibold'
                               : 'text-ink-200 hover:bg-ink-700/50'
                           }`}
                         >
@@ -836,7 +836,7 @@ export const PodcastPage: React.FC = () => {
                       onClick={() => handleChangePlaybackRate(rate)}
                       className={`min-h-[34px] px-2.5 py-1 rounded-lg text-xs font-semibold transition-all touch-manipulation cursor-pointer active:scale-95 ${
                         playbackRate === rate
-                          ? 'bg-accent-400 text-ink-50 font-semibold'
+                          ? 'bg-accent-400 text-on-accent font-semibold'
                           : 'text-ink-400 hover:text-ink-200 bg-ink-800/40 hover:bg-ink-700/50'
                       }`}
                     >
@@ -859,7 +859,7 @@ export const PodcastPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={handleTogglePlay}
-                    className="w-12 h-12 min-h-[48px] min-w-[48px] rounded-xl bg-accent-400 hover:bg-accent-500 text-ink-50 font-semibold flex items-center justify-center transition-transform active:scale-95 touch-manipulation cursor-pointer"
+                    className="w-12 h-12 min-h-[48px] min-w-[48px] rounded-xl bg-accent-400 hover:bg-accent-500 text-on-accent font-semibold flex items-center justify-center transition-transform active:scale-95 touch-manipulation cursor-pointer"
                     title={isPlaying ? 'Jeda' : 'Putar'}
                   >
                     {isPlaying ? (
@@ -918,7 +918,7 @@ export const PodcastPage: React.FC = () => {
                 onClick={() => setSelectedCategory(cat.id)}
                 className={`px-3.5 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-all ${
                   isSelected
-                    ? 'bg-accent-400 text-ink-50 font-semibold'
+                    ? 'bg-accent-400 text-on-accent font-semibold'
                     : 'text-ink-400 hover:text-ink-200 hover:bg-ink-800/40'
                 }`}
               >
@@ -1061,7 +1061,7 @@ export const PodcastPage: React.FC = () => {
                       onClick={() => handleSelectEpisode(episode, 'mp3')}
                       className={`min-h-[40px] px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all touch-manipulation cursor-pointer active:scale-95 ${
                         isCurrent && mediaMode === 'mp3' && isPlaying
-                          ? 'bg-accent-400 text-ink-50 font-semibold'
+                          ? 'bg-accent-400 text-on-accent font-semibold'
                           : 'bg-surface-elevated border border-ink-700 hover:border-accent-500/50 text-accent-700 hover:text-ink-50'
                       }`}
                       title="Putar Versi MP3 (Tampilan Banner)"
@@ -1077,7 +1077,7 @@ export const PodcastPage: React.FC = () => {
                         onClick={() => handleSelectEpisode(episode, 'mp4')}
                         className={`min-h-[40px] px-3.5 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-all touch-manipulation cursor-pointer active:scale-95 ${
                           isCurrent && mediaMode === 'mp4' && isPlaying
-                            ? 'bg-accent-400 text-ink-50 font-semibold'
+                            ? 'bg-accent-400 text-on-accent font-semibold'
                             : 'bg-surface-elevated border border-ink-700 hover:border-accent-500/50 text-accent-700 hover:text-ink-50'
                         }`}
                         title="Putar Versi MP4 (Video Lengkap)"
@@ -1182,10 +1182,10 @@ export const PodcastPage: React.FC = () => {
                   }
                   className="w-full px-3 py-2 rounded-lg bg-surface-elevated border border-ink-700 text-xs text-ink-200 focus:outline-none focus:border-accent-500"
                 >
-                  <option value="tidur">🌙 Pengantar Tidur & Ketenangan Jiwa</option>
-                  <option value="buka">🌅 Menunggu Buka (Ngabuburit)</option>
-                  <option value="sahur">🥣 Menemani Sahur & Qiyamullail</option>
-                  <option value="kajian">📖 Tadabbur & Fiqih Ramadan</option>
+                  <option value="tidur">Pengantar Tidur & Ketenangan Jiwa</option>
+                  <option value="buka">Menunggu Buka (Ngabuburit)</option>
+                  <option value="sahur">Menemani Sahur & Qiyamullail</option>
+                  <option value="kajian">Tadabbur & Fiqih Ramadan</option>
                 </select>
               </div>
 
@@ -1330,7 +1330,7 @@ export const PodcastPage: React.FC = () => {
                   <span>Metode 1: Fitur "Anti-Mati Layar" (Rekomendasi Utama)</span>
                 </div>
                 <p className="text-ink-300">
-                  Cukup aktifkan tombol <strong>"Layar Nyala ☀️"</strong> di atas pemutar. Layar HP Anda akan dijaga tetap aktif dengan kecerahan minimal saat mendengarkan sebelum tidur atau santap sahur tanpa takut layar mati otomatis.
+                  Cukup aktifkan tombol <strong>"Layar Nyala"</strong> di atas pemutar. Layar HP Anda akan dijaga tetap aktif dengan kecerahan minimal saat mendengarkan sebelum tidur atau santap sahur tanpa takut layar mati otomatis.
                 </p>
               </div>
 

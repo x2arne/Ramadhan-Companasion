@@ -425,7 +425,7 @@ export const QuranReaderModal: React.FC<QuranReaderModalProps> = ({
                 }}
                 className={`min-h-[38px] px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all touch-manipulation cursor-pointer active:scale-95 ${
                   scrollSpeed === speed
-                    ? 'bg-accent-400 text-ink-50 font-semibold'
+                    ? 'bg-accent-400 text-on-accent font-semibold'
                     : 'bg-surface/80 text-ink-300 hover:text-ink-50 hover:bg-ink-700/60 border border-ink-700/60'
                 }`}
               >
@@ -604,7 +604,7 @@ export const QuranReaderModal: React.FC<QuranReaderModalProps> = ({
                           title="Tandai Sebagai Bacaan Terakhir"
                         >
                           <span className="hidden sm:inline">Tandai Terakhir</span>
-                          <span className="sm:hidden text-xs">📌 Terakhir</span>
+                          <span className="sm:hidden text-xs">Terakhir</span>
                         </Button>
                       </div>
                     </div>

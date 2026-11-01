@@ -150,7 +150,7 @@ export async function triggerTestNotification(
     };
   }
 
-  const ok = sendPrayerNotification('🕌 Waktu Sholat Tiba (Uji Coba Notifikasi)', {
+  const ok = sendPrayerNotification('Waktu Sholat Tiba (Uji Coba Notifikasi)', {
     body: 'Alhamdulillah! Notifikasi jadwal sholat dan alarm Ramadan Companion aktif dengan lancar.',
     playSound: soundEnabled,
   });

@@ -43,6 +43,7 @@ import { Input, Select } from '../../components/common/Input';
 import { Dialog } from '../../components/common/Dialog';
 import { LocationModal } from '../../components/common/LocationModal';
 import { LocationPermissionGuide } from '../../components/common/LocationPermissionGuide';
+import { AccountSection } from './AccountSection';
 import { useAppSettings } from '../../context/AppSettingsContext';
 import { useToast } from '../../context/ToastContext';
 import type { PrayerMethod, PrayerNotificationToggles } from '../../types';
@@ -111,7 +112,7 @@ export const PengaturanPage: React.FC = () => {
       const res = await sendTestDiscordWebhook(discordSettings.webhookUrl, settings.location.city || 'Indonesia');
       if (res.success) {
         showToast({
-          title: 'Webhook Terkirim! 🚀',
+          title: 'Webhook Terkirim!',
           message: 'Pesan uji coba berhasil mendarat di channel Discord Anda.',
           type: 'success',
           duration: 4000,
@@ -151,7 +152,7 @@ export const PengaturanPage: React.FC = () => {
           localStorage.setItem('ramadan_custom_alarm_name', file.name);
           setCustomAudioName(file.name);
           showToast({
-            title: 'Audio Kustom Tersimpan! 🎵',
+            title: 'Audio Kustom Tersimpan!',
             message: `"${file.name}" kini menjadi nada alarm pilihan Anda.`,
             type: 'success',
           });
@@ -388,13 +389,14 @@ export const PengaturanPage: React.FC = () => {
         <div>
           <div className="flex items-center gap-2">
             <h1 className="text-2xl font-bold text-ink-100">Pengaturan Aplikasi</h1>
-            <Badge variant="emerald">Phase 7 PWA & Launch Ready</Badge>
           </div>
           <p className="text-xs text-ink-400 mt-1">
             Konfigurasi lengkap notifikasi adzan, metode hisab falakiyah, lokasi, tipografi, instalasi PWA, dan pencadangan data.
           </p>
         </div>
       </div>
+
+      <AccountSection />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* ================= TEMA TAMPILAN ================= */}
@@ -408,7 +410,7 @@ export const PengaturanPage: React.FC = () => {
               </div>
             </div>
             <Badge variant="violet" size="sm">
-              {settings.theme.toUpperCase()}
+              {{ dark: 'Gelap', light: 'Terang', system: 'Otomatis' }[settings.theme]}
             </Badge>
           </CardHeader>
           <CardContent className="space-y-3">
@@ -957,7 +959,7 @@ export const PengaturanPage: React.FC = () => {
                   size="sm"
                   onClick={handleTestDiscordWebhook}
                   disabled={isTestingDiscord || !discordSettings.webhookUrl}
-                  className="shrink-0 bg-accent-400 hover:bg-accent-500 text-ink-50 font-semibold"
+                  className="shrink-0 bg-accent-400 hover:bg-accent-500 text-on-accent font-semibold"
                 >
                   <Send className="w-3.5 h-3.5 mr-1" />
                   {isTestingDiscord ? 'Mengirim...' : 'Tes Webhook'}
@@ -1002,8 +1004,8 @@ export const PengaturanPage: React.FC = () => {
               </label>
             </div>
 
-            <div className="p-3 rounded-lg bg-ink-800/20 border border-accent-800/30 text-xs text-accent-700 leading-relaxed">
-              💡 <strong>Cara buat Webhook di Discord:</strong> Buka channel di server Discord Anda $\rightarrow$ Klik ikon Gear ⚙️ (Edit Channel) $\rightarrow$ Menu <strong>Integrations</strong> $\rightarrow$ <strong>Webhooks</strong> $\rightarrow$ <strong>New Webhook</strong> $\rightarrow$ Klik <strong>Copy Webhook URL</strong> lalu tempel di atas.
+            <div className="p-3 rounded-lg bg-accent-400/15 border border-accent-500/40 text-sm text-ink-200 leading-relaxed">
+              <strong>Cara membuat webhook:</strong> buka Edit Channel (ikon gerigi), pilih <strong>Integrations</strong>, lalu <strong>Webhooks</strong>, klik <strong>New Webhook</strong>, dan <strong>Copy Webhook URL</strong>. Tempel URL-nya di kolom di atas.
             </div>
           </CardContent>
         </Card>

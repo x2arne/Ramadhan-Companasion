@@ -40,7 +40,7 @@ export const PWAInstallModal: React.FC<PWAInstallModalProps> = ({
             onClick={() => setActiveTab('android')}
             className={`flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg text-xs font-semibold transition-all ${
               activeTab === 'android'
-                ? 'bg-accent-400 text-ink-50 font-semibold'
+                ? 'bg-accent-400 text-on-accent font-semibold'
                 : 'text-ink-400 hover:text-ink-200'
             }`}
           >
@@ -52,7 +52,7 @@ export const PWAInstallModal: React.FC<PWAInstallModalProps> = ({
             onClick={() => setActiveTab('ios')}
             className={`flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg text-xs font-semibold transition-all ${
               activeTab === 'ios'
-                ? 'bg-accent-400 text-ink-50 font-semibold'
+                ? 'bg-accent-400 text-on-accent font-semibold'
                 : 'text-ink-400 hover:text-ink-200'
             }`}
           >
@@ -64,7 +64,7 @@ export const PWAInstallModal: React.FC<PWAInstallModalProps> = ({
             onClick={() => setActiveTab('desktop')}
             className={`flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg text-xs font-semibold transition-all ${
               activeTab === 'desktop'
-                ? 'bg-accent-400 text-ink-50 font-semibold'
+                ? 'bg-accent-400 text-on-accent font-semibold'
                 : 'text-ink-400 hover:text-ink-200'
             }`}
           >

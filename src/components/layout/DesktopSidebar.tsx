@@ -14,8 +14,7 @@ import {
   Radio,
   Compass,
   Disc,
-  Palette,
-} from 'lucide-react';
+  Palette, Heart, Megaphone } from 'lucide-react';
 import { mainNavItems } from '../../types/navigation';
 import { useAppSettings } from '../../context/AppSettingsContext';
 import { Badge } from '../common/Badge';
@@ -38,6 +37,8 @@ export const DesktopSidebar: React.FC = () => {
     { id: 'kartu-ucapan', label: 'Kartu Ucapan', path: '/kartu-ucapan', icon: Palette },
     { id: 'galeri', label: 'Galeri Kenangan', path: '/galeri', icon: Camera },
     { id: 'podcast', label: 'Podcast Islami', path: '/podcast', icon: Radio },
+    { id: 'info-update', label: 'Info Update', path: '/info-update', icon: Megaphone },
+    { id: 'donasi', label: 'Dukung Developer', path: '/donasi', icon: Heart },
   ];
 
   return (
@@ -132,7 +133,7 @@ export const DesktopSidebar: React.FC = () => {
         <div className="flex items-center justify-between px-1 text-xs text-ink-400">
           <span className="flex items-center gap-1">
             <ShieldCheck className="w-3.5 h-3.5 text-accent-700" />
-            <span>Phase 7 PWA Ready</span>
+            <span>Bisa dipakai offline</span>
           </span>
           <span>v1.0.0</span>
         </div>

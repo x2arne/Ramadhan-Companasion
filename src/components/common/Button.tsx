@@ -29,7 +29,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        'bg-accent-400 hover:bg-accent-500 text-ink-50 font-semibold border border-accent-300/40',
+        'bg-accent-400 hover:bg-accent-500 text-on-accent font-semibold border border-accent-300/40',
       secondary:
         'bg-surface-elevated hover:bg-surface-elevated/80 text-ink-100 border border-ink-700/50 hover:border-ink-600/70',
       outline:

@@ -129,7 +129,7 @@ export function getArticleById(id: string): EducationalArticle | undefined {
  */
 export function formatHadisForCopy(hadis: HadisItem): string {
   return [
-    `📖 ${hadis.title}`,
+    `${hadis.title}`,
     `Perawi: ${hadis.narrator}`,
     `Rujukan: ${hadis.bookName} (${hadis.referenceNumber})`,
     `Derajat: ${hadis.grade}`,
@@ -138,7 +138,7 @@ export function formatHadisForCopy(hadis: HadisItem): string {
     '',
     `Artinya: "${hadis.translation}"`,
     '',
-    hadis.explanation ? `💡 Faidah & Penjelasan:\n${hadis.explanation}\n` : '',
+    hadis.explanation ? `Faidah & Penjelasan:\n${hadis.explanation}\n` : '',
     '— Dibagikan dari Ramadan Companion (Kutubus Sittah Collection)',
   ]
     .filter(Boolean)

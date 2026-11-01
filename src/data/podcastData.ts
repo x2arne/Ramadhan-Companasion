@@ -7,7 +7,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     title: 'Pikiran Lebih Penting! Jangan Dibodohin Perasaan (Escape Eps 13)',
     speaker: 'Raymond Chin ft. Ustadz Felix Siauw, Koiyocabe, Veren',
     category: 'tidur',
-    categoryLabel: 'Pengantar Tidur & Ketenangan Jiwa 🌙',
+    categoryLabel: 'Pengantar Tidur & Ketenangan Jiwa',
     suitableFor: 'Menenangkan pikiran yang overthinking sebelum tidur agar lelap dan tenang',
     description:
       'Diskusi mendalam tentang bagaimana akal dan iman seharusnya mengendalikan gejolak emosi dan perasaan. Sangat pas didengarkan sebelum tidur malam di bulan Ramadan untuk melepas rasa gundah, cemas, dan beban pikiran seharian.',
@@ -22,7 +22,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     title: 'Cara Kebal Dari Djinn, Setan, Dan Iblis?! (Escape Eps 11)',
     speaker: 'Raymond Chin ft. Ustadz Felix Siauw, Koiyocabe, Veren',
     category: 'tidur',
-    categoryLabel: 'Pengantar Tidur & Penjaga Malam 🌙',
+    categoryLabel: 'Pengantar Tidur & Penjaga Malam',
     suitableFor: 'Didengarkan saat bersiap tidur malam untuk membentengi diri dengan tauhid',
     description:
       'Mengupas tuntas alam gaib, tipu daya setan, serta amalan dan doa adab tidur sunnah yang menjadi benteng tak kasat mata bagi seorang mukmin. Membantu hati merasa aman dan tenteram saat memejamkan mata.',
@@ -37,7 +37,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     title: 'Islam Itu Ribet, Banyak Aturan!?!? (Escape Eps 5)',
     speaker: 'Raymond Chin ft. Ustadz Felix Siauw, Koiyocabe, Verren',
     category: 'buka',
-    categoryLabel: 'Menunggu Buka (Ngabuburit) 🌅',
+    categoryLabel: 'Menunggu Buka (Ngabuburit)',
     suitableFor: 'Menemani waktu ngabuburit santai menjelang adzan Maghrib berkumandang',
     description:
       'Diskusi renyah dan kritis mengenai esensi syariat Islam: apakah aturan Islam membatasi kebebasan atau justru menjadi panduan keselamatan hidup manusia? Obrolan asyik dan bergizi untuk mengisi waktu menunggu berbuka puasa.',
@@ -52,7 +52,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     title: 'Sejarah Jin Dan Manusia Sampai Lailatul Qodar (Escape Eps 24)',
     speaker: 'Raymond Chin ft. Ustadz Felix Siauw, Veren',
     category: 'kajian',
-    categoryLabel: 'Tadabbur Malam Ramadan ✨',
+    categoryLabel: 'Tadabbur Malam Ramadan',
     suitableFor: 'Mempersiapkan ruhani menyongsong malam Lailatul Qadar & 10 malam terakhir',
     description:
       'Kupas tuntas asal-usul penciptaan jin dan manusia, perjalanan peradaban, hingga rahasia malam Lailatul Qadar yang lebih mulia dari 1000 bulan. Wajib didengarkan saat beri\'tikaf atau bertadabbur di malam-malam Ramadan.',
@@ -67,7 +67,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     title: 'Bahas Takdir "Allah Tidak Adil", Lahir Miskin ?! (Escape Eps 2)',
     speaker: 'Raymond Chin ft. Ustadz Felix Siauw, Koi, Verren',
     category: 'sahur',
-    categoryLabel: 'Menemani Waktu Sahur 🥣',
+    categoryLabel: 'Menemani Waktu Sahur',
     suitableFor: 'Pembangkit semangat ikhtiar & rasa syukur saat santap sahur pukul 03.00-04.00',
     description:
       'Membongkar konsep takdir, ikhtiar, tawakal, dan keadilan Allah SWT dengan analogi modern yang mudah dicerna. Mengisi santap sahur Anda dengan suntikan energi dan sudut pandang positif menghadapi tantangan hari ini.',
@@ -82,7 +82,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     title: 'Kiamat Sudah Dekat, Ini Tandanya!? (Escape Eps 1)',
     speaker: 'Raymond Chin ft. Ustadz Felix Siauw, Koiyocabe, Veren',
     category: 'sahur',
-    categoryLabel: 'Menemani Waktu Sahur & Qiyamullail 🥣',
+    categoryLabel: 'Menemani Waktu Sahur & Qiyamullail',
     suitableFor: 'Muhasabah sepertiga malam sebelum imsak dan menjelang sholat Subuh',
     description:
       'Pembahasan pembuka seri Escape tentang fenomena tanda-tanda akhir zaman yang mulai tampak nyata di sekitar kita. Membakar semangat untuk memperbanyak istighfar dan amalan shalih di waktu sahur.',
@@ -97,7 +97,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     title: 'Cuma 1 Aliran Islam Yang Masuk Surga.. (Escape Eps 14)',
     speaker: 'Raymond Chin ft. Ustadz Felix Siauw, Koiyo Cabe, Verren',
     category: 'kajian',
-    categoryLabel: 'Tadabbur & Fiqih Ramadan 📖',
+    categoryLabel: 'Tadabbur & Fiqih Ramadan',
     suitableFor: 'Menambah wawasan keislaman, persatuan umat, & ukhuwah Islamiyyah',
     description:
       'Penjelasan tuntas mengenai hadis perpecahan umat (iftiraqul ummah), definisi Ahlus Sunnah wal Jama\'ah, serta bagaimana bersikap dewasa dan bijaksana di tengah perbedaan golongan di kalangan kaum muslimin.',
@@ -112,7 +112,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     title: 'Ramalan Kiamat, Siksa Kubur, Azab & Hidayah?! (Escape Eps 12)',
     speaker: 'Raymond Chin ft. Ustadz Felix Siauw, Koiyo Cabe, Veren',
     category: 'kajian',
-    categoryLabel: 'Tadabbur & Muhasabah Ramadan 📖',
+    categoryLabel: 'Tadabbur & Muhasabah Ramadan',
     suitableFor: 'Penyegar ruhani saat berpuasa untuk menjaga lisan dan perbuatan',
     description:
       'Diskusi membuka mata tentang alam barzakh, siksa kubur, dan bagaimana rahmat hidayah Allah dapat menjemput siapa saja yang membuka hatinya dengan tulus. Refleksi yang sangat menyentuh hati di bulan suci.',
@@ -129,7 +129,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     title: 'Murottal Surat Al-Mulk: Pelindung Siksa Kubur Pengantar Tidur',
     speaker: 'Syaikh Misyari Rasyid Al-Afasy',
     category: 'tidur',
-    categoryLabel: 'Pengantar Tidur & Ruqyah 🌙',
+    categoryLabel: 'Pengantar Tidur & Ruqyah',
     suitableFor: 'Didengarkan langsung di ranjang menjelang tidur malam',
     description:
       'Lantunan merdu dan syahdu Surat Al-Mulk (Tabarakalladzi). Sunnah dibaca atau didengarkan setiap malam sebelum tidur sebagai penyelamat dari siksa kubur.',
@@ -145,7 +145,7 @@ export const PODCAST_EPISODES: PodcastEpisode[] = [
     title: 'Murottal Surat Ar-Rahman: Nikmat Tuhan Mana yang Kamu Dustakan',
     speaker: 'Syaikh Misyari Rasyid Al-Afasy',
     category: 'buka',
-    categoryLabel: 'Menunggu Buka (Ngabuburit) 🌅',
+    categoryLabel: 'Menunggu Buka (Ngabuburit)',
     suitableFor: 'Menemani 15-20 menit menjelang adzan Maghrib untuk menyuburkan rasa syukur',
     description:
       'Pengingat atas limpahan karunia Allah SWT dengan pengulangan ayat "Fabiayyi ala-i Rabbikuma tukadzdziban". Mengubah rasa haus dan lapar menjadi puncak kesyukuran berbuka puasa.',

@@ -5,23 +5,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Netral: hijau lembut (skala terbalik: 50 = teks tergelap, 950 = latar terang)
+        // Netral lewat CSS variable: terang (hijau lembut) dan gelap (biru malam). 50 = teks, 950 = latar.
         ink: {
-          50: '#111b0d', 100: '#1d2a17', 200: '#2f3f27', 300: '#44563a', 400: '#566a4a',
-          500: '#7f9270', 600: '#aebf9d', 700: '#d3e0c3', 800: '#e8f0dd', 900: '#ffffff', 950: '#f4f8ef',
+          50: 'rgb(var(--ink-50) / <alpha-value>)',
+          100: 'rgb(var(--ink-100) / <alpha-value>)',
+          200: 'rgb(var(--ink-200) / <alpha-value>)',
+          300: 'rgb(var(--ink-300) / <alpha-value>)',
+          400: 'rgb(var(--ink-400) / <alpha-value>)',
+          500: 'rgb(var(--ink-500) / <alpha-value>)',
+          600: 'rgb(var(--ink-600) / <alpha-value>)',
+          700: 'rgb(var(--ink-700) / <alpha-value>)',
+          800: 'rgb(var(--ink-800) / <alpha-value>)',
+          900: 'rgb(var(--ink-900) / <alpha-value>)',
+          950: 'rgb(var(--ink-950) / <alpha-value>)',
         },
         // Satu-satunya aksen: kuning hangat
         accent: {
           50: '#fdf8e8', 100: '#faefc4', 200: '#f5df8c', 300: '#eecb57', 400: '#e3b23a',
-          500: '#cf9a24', 600: '#ae7a1b', 700: '#8a5c19', 800: '#724a1b', 900: '#5f3d1a', 950: '#371f0a',
+          500: '#cf9a24', 600: '#ae7a1b', 700: 'rgb(var(--accent-700) / <alpha-value>)', 800: 'rgb(var(--accent-800) / <alpha-value>)', 900: '#5f3d1a', 950: '#371f0a',
         },
-        background: { DEFAULT: '#f4f8ef', darker: '#e8f0dd', lighter: '#f9fcf5' },
+        background: {
+          DEFAULT: 'rgb(var(--bg) / <alpha-value>)',
+          darker: 'rgb(var(--bg-darker) / <alpha-value>)',
+          lighter: 'rgb(var(--bg-lighter) / <alpha-value>)',
+        },
+        'on-accent': '#111b0d',
         surface: {
-          DEFAULT: '#ffffff',
-          card: '#ffffff',
-          elevated: '#f0f6e8',
-          border: 'rgba(47, 63, 39, 0.16)',
-          'border-active': 'rgba(174, 122, 27, 0.6)',
+          DEFAULT: 'rgb(var(--surface) / <alpha-value>)',
+          card: 'rgb(var(--surface) / <alpha-value>)',
+          elevated: 'rgb(var(--surface-elevated) / <alpha-value>)',
+          border: 'rgb(var(--border) / 0.16)',
+          'border-active': 'rgb(var(--accent-ring) / 0.6)',
         },
       },
       fontFamily: {

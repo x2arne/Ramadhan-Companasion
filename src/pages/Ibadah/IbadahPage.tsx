@@ -24,6 +24,7 @@ import {
   HelpCircle,
 } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../../components/common/Card';
+import { SyncHint } from '../../components/common/SyncHint';
 import { Badge } from '../../components/common/Badge';
 import { Button } from '../../components/common/Button';
 import { Input } from '../../components/common/Input';
@@ -241,6 +242,7 @@ export const IbadahPage: React.FC = () => {
 
   return (
     <div className="space-y-6">
+      <SyncHint />
       {/* Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
@@ -789,7 +791,7 @@ export const IbadahPage: React.FC = () => {
                   onClick={() => setActiveCategory(cat.id as any)}
                   className={`px-3.5 py-2 min-h-[40px] rounded-lg text-xs font-semibold whitespace-nowrap transition-all touch-manipulation cursor-pointer active:scale-95 ${
                     isActive
-                      ? 'bg-accent-400 text-ink-50 font-semibold'
+                      ? 'bg-accent-400 text-on-accent font-semibold'
                       : 'bg-surface-elevated/40 hover:bg-surface-elevated text-ink-300 hover:text-ink-50 border border-ink-800'
                   }`}
                 >

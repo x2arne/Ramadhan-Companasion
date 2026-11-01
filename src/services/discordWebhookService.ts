@@ -86,7 +86,7 @@ export const sendDiscordWebhook = async (
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        username: payload.username || 'Ramadan Companion 🌙',
+        username: payload.username || 'Ramadan Companion',
         avatar_url: payload.avatar_url || 'https://ramadhan-site.vercel.app/crescent.svg',
         ...payload,
       }),
@@ -117,7 +117,7 @@ export const sendTestDiscordWebhook = async (
   cityName: string
 ): Promise<{ success: boolean; error?: string }> => {
   const testEmbed: DiscordEmbed = {
-    title: '🔔 Uji Coba Notifikasi Ramadan Companion',
+    title: 'Uji Coba Notifikasi Ramadan Companion',
     description: `Bot webhook berhasil terhubung ke channel Discord Anda!\n\nAplikasi **Ramadan Companion** siap mengirimkan pengingat waktu sholat, peringatan imsak, dan sirine berbuka puasa langsung ke server Discord ini.`,
     color: 0xe3b23a, // Violet
     thumbnail: {
@@ -125,17 +125,17 @@ export const sendTestDiscordWebhook = async (
     },
     fields: [
       {
-        name: '📍 Lokasi Terpantau',
+        name: 'Lokasi Terpantau',
         value: cityName,
         inline: true,
       },
       {
-        name: '⚡ Status Integrasi',
+        name: 'Status Integrasi',
         value: 'Aktif & Terverifikasi',
         inline: true,
       },
       {
-        name: '🌐 Web App',
+        name: 'Web App',
         value: '[ramadhan-site.vercel.app](https://ramadhan-site.vercel.app)',
         inline: false,
       },

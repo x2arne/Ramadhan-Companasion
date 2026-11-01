@@ -207,7 +207,7 @@ export const TasbihPage: React.FC = () => {
       triggerVibrate([40, 80, 40]);
 
       showToast({
-        title: `Target ${currentPreset.latin} Tercapai! ✨`,
+        title: `Target ${currentPreset.latin} Tercapai!`,
         message: `Alhamdulillah telah menyelesaikan ${target}x hitungan.`,
         type: 'success',
         duration: 3000,
@@ -261,7 +261,7 @@ export const TasbihPage: React.FC = () => {
         <div className="relative z-10 space-y-3">
           <div className="flex items-center gap-2 flex-wrap">
             <Badge variant="violet" dot>
-              Tasbih Digital & Dzikir Interaktif 📿
+              Tasbih Digital & Dzikir Interaktif
             </Badge>
             <Badge variant="emerald">Haptic Vibration & Web Audio</Badge>
           </div>
@@ -299,7 +299,7 @@ export const TasbihPage: React.FC = () => {
               onClick={() => setActivePresetIndex(idx)}
               className={`shrink-0 px-3.5 py-2 rounded-lg text-xs font-semibold transition-all border ${
                 activePresetIndex === idx
-                  ? 'bg-accent-400 text-ink-50 font-semibold border-accent-400 '
+                  ? 'bg-accent-400 text-on-accent font-semibold border-accent-400 '
                   : 'bg-surface-elevated/70 text-ink-300 border-ink-700/80 hover:bg-ink-700/60'
               }`}
             >
@@ -331,14 +331,14 @@ export const TasbihPage: React.FC = () => {
           {/* SVG Animated Circular Progress Ring */}
           <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none" viewBox="0 0 100 100">
             {/* Background track circle */}
-            <circle cx="50" cy="50" r="45" fill="none" stroke="#d3e0c3" strokeWidth="4" />
+            <circle cx="50" cy="50" r="45" fill="none" stroke="rgb(var(--ink-700))" strokeWidth="4" />
             {/* Progress circle */}
             <circle
               cx="50"
               cy="50"
               r="45"
               fill="none"
-              stroke="#ae7a1b"
+              stroke="rgb(var(--accent-700))"
               strokeWidth="5"
               strokeLinecap="round"
               strokeDasharray="283"

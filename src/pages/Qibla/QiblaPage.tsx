@@ -128,7 +128,7 @@ export const QiblaPage: React.FC = () => {
         <div className="relative z-10 space-y-3">
           <div className="flex items-center gap-2 flex-wrap">
             <Badge variant="emerald" dot>
-              Arah Kiblat Digital 🧭
+              Arah Kiblat Digital
             </Badge>
             <Badge variant="blue">Presisi Trigonometri Bola Bumi</Badge>
           </div>
@@ -218,15 +218,15 @@ export const QiblaPage: React.FC = () => {
             {/* Degree Marks */}
             <svg className="w-full h-full" viewBox="0 0 300 300">
               {/* Dial Border Circle */}
-              <circle cx="150" cy="150" r="140" fill="none" stroke="#aebf9d" strokeWidth="2" strokeDasharray="4 6" opacity="0.6" />
-              <circle cx="150" cy="150" r="126" fill="none" stroke="#d3e0c3" strokeWidth="1" />
+              <circle cx="150" cy="150" r="140" fill="none" stroke="rgb(var(--ink-600))" strokeWidth="2" strokeDasharray="4 6" opacity="0.6" />
+              <circle cx="150" cy="150" r="126" fill="none" stroke="rgb(var(--ink-700))" strokeWidth="1" />
 
               {/* Major Ticks every 30 degrees */}
               {Array.from({ length: 12 }).map((_, i) => {
                 const angle = i * 30;
                 return (
                   <g key={angle} transform={`rotate(${angle} 150 150)`}>
-                    <line x1="150" y1="12" x2="150" y2="22" stroke={angle % 90 === 0 ? '#2f3f27' : '#566a4a'} strokeWidth={angle % 90 === 0 ? '3' : '1.5'} />
+                    <line x1="150" y1="12" x2="150" y2="22" stroke={angle % 90 === 0 ? 'rgb(var(--ink-200))' : 'rgb(var(--ink-400))'} strokeWidth={angle % 90 === 0 ? '3' : '1.5'} />
                   </g>
                 );
               })}
@@ -256,7 +256,7 @@ export const QiblaPage: React.FC = () => {
                 <div
                   className={`w-10 h-10 rounded-xl flex items-center justify-center p-1.5 transition-all duration-300 ${
                     isAligned
-                      ? 'bg-accent-500 text-ink-50 scale-110'
+                      ? 'bg-accent-500 text-on-accent scale-110'
                       : 'bg-accent-600/90 text-ink-50'
                   }`}
                   title={`Ka'bah (${qiblaAngle}°)`}

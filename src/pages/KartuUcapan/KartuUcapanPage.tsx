@@ -108,7 +108,7 @@ export const KartuUcapanPage: React.FC = () => {
     try {
       await navigator.clipboard.writeText(fullText);
       showToast({
-        title: 'Teks Ucapan Disalin! 📋',
+        title: 'Teks Ucapan Disalin!',
         message: 'Teks ucapan siap ditempel ke WhatsApp, Telegram, atau media sosial.',
         type: 'success',
       });
@@ -226,7 +226,7 @@ export const KartuUcapanPage: React.FC = () => {
       document.body.removeChild(a);
 
       showToast({
-        title: 'Gambar Kartu Diunduh! 🖼️',
+        title: 'Gambar Kartu Diunduh!',
         message: 'Kartu ucapan beresolusi tinggi berhasil disimpan ke perangkat Anda.',
         type: 'success',
         duration: 3500,
@@ -251,7 +251,7 @@ export const KartuUcapanPage: React.FC = () => {
         <div className="relative z-10 space-y-3">
           <div className="flex items-center gap-2 flex-wrap">
             <Badge variant="gold" dot>
-              Generator Kartu Ucapan Ramadan & Idul Fitri 🎨
+              Generator Kartu Ucapan Ramadan & Idul Fitri
             </Badge>
             <Badge variant="blue">Unduh PNG & Kirim WhatsApp</Badge>
           </div>
@@ -358,7 +358,7 @@ export const KartuUcapanPage: React.FC = () => {
               variant="primary"
               onClick={handleDownloadImage}
               disabled={isGenerating}
-              className="w-full flex items-center justify-center gap-2 bg-accent-400 hover:bg-accent-500 text-ink-50 font-semibold"
+              className="w-full flex items-center justify-center gap-2 bg-accent-400 hover:bg-accent-500 text-on-accent font-semibold"
             >
               <Download className="w-4 h-4" />
               <span>{isGenerating ? 'Menyimpan...' : 'Unduh Gambar'}</span>

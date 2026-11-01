@@ -180,7 +180,7 @@ export const DoaPage: React.FC = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`whitespace-nowrap px-3.5 py-2 min-h-[40px] rounded-lg text-xs font-medium transition-all shrink-0 flex items-center gap-1.5 touch-manipulation cursor-pointer active:scale-95 ${
                   isActive
-                    ? 'bg-accent-400 text-ink-50 font-semibold'
+                    ? 'bg-accent-400 text-on-accent font-semibold'
                     : 'bg-surface-elevated/50 hover:bg-surface-elevated border border-ink-800 text-ink-300 hover:text-ink-50'
                 }`}
               >

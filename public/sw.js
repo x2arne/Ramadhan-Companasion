@@ -1,5 +1,5 @@
 // Ramadan Companion Service Worker — Phase 7 PWA
-const CACHE_NAME = 'ramadan-companion-v4';
+const CACHE_NAME = 'ramadan-companion-v9';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -37,6 +37,9 @@ self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
   const url = new URL(event.request.url);
+
+  // Panggilan API (daftar donatur) selalu ke jaringan, jangan di-cache
+  if (url.pathname.startsWith('/api/')) return;
 
   // Exclude audio streams, youtube embeds, and external analytics from aggressive caching
   if (

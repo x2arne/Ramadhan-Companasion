@@ -19,6 +19,9 @@ import { KhazanahPage } from './pages/Khazanah/KhazanahPage';
 import { QiblaPage } from './pages/Qibla/QiblaPage';
 import { TasbihPage } from './pages/Tasbih/TasbihPage';
 import { KartuUcapanPage } from './pages/KartuUcapan/KartuUcapanPage';
+import { InfoUpdatePage } from './pages/InfoUpdate/InfoUpdatePage';
+import { AuthProvider } from './context/AuthContext';
+import { DonasiPage } from './pages/Donasi/DonasiPage';
 import { NotFoundPage } from './pages/NotFoundPage';
 
 export const App: React.FC = () => {
@@ -27,6 +30,7 @@ export const App: React.FC = () => {
     <BrowserRouter>
       <AppSettingsProvider>
         <ToastProvider>
+        <AuthProvider>
           <Routes>
             <Route path="/" element={<AppLayout />}>
               <Route index element={<HomePage />} />
@@ -43,9 +47,12 @@ export const App: React.FC = () => {
               <Route path="galeri" element={<GaleriPage />} />
               <Route path="podcast" element={<PodcastPage />} />
               <Route path="khazanah" element={<KhazanahPage />} />
+              <Route path="donasi" element={<DonasiPage />} />
+              <Route path="info-update" element={<InfoUpdatePage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>
           </Routes>
+        </AuthProvider>
         </ToastProvider>
       </AppSettingsProvider>
     </BrowserRouter>
