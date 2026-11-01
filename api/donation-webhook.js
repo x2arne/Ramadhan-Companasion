@@ -73,6 +73,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error('donation-webhook: gagal memproses', err);
-    return res.status(500).json({ error: 'Gagal memproses' });
+    // Kunci sudah valid di titik ini, jadi aman menampilkan penyebab untuk membantu diagnosa
+    return res.status(500).json({ error: 'Gagal memproses', detail: String(err?.message || err).slice(0, 200) });
   }
 }
